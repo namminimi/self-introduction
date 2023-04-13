@@ -1,0 +1,156 @@
+.selectProject {
+    width: 1200px;
+    height: 880px;
+    margin: 0 auto;
+    background-color: #BFDCE5;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px 50px;
+    display: none;
+    box-shadow: 3px 3px 50px black;
+    .grClose {
+        position: absolute;
+        top:2%;
+        left: 95%;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .mainText{
+      font-size: 40px;
+      margin-bottom: 15px;  
+    }
+    .detailWrap{
+        
+        border-radius: 5px;
+        padding: 15px;
+        .detailForm{
+            display: flex;
+            width: 100%;
+            .imgList{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                .bigImg {
+                    img{
+                        width: 550px;
+                        height: 350px;
+                    }
+                    iframe {
+                        width: 550px;
+                        height: 350px;
+                    }
+                }
+                .smallImg {
+                    display: flex;
+                    padding: 10px 0px;
+                    li{
+                        margin-left: 10px;
+                        img {
+                            width: 130px;
+                            height: 100px; 
+                        }
+                        &:first-child{
+                            margin-left: 0px
+                        }
+                    }
+                }
+            }
+            .descList {
+                width: 50%;
+                
+                padding-left: 50px;
+                h2 {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                    white-space:pre-line;
+                }
+                .textB {
+                    font-size: 23px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    
+                    span {
+                        margin-left: 10px;
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+                    a {
+                        margin-left: 10px;
+                        font-weight: 400;
+                        font-size: 20px;
+                        text-decoration: underline;
+                        &:hover {
+                            color: blueviolet;
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                }
+                .textS {
+                    margin-bottom: 5px;
+                }
+                
+                .useLanguage {
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        border: 1px solid #ccc;
+                        background-color: #fff;
+                        border-radius: 20px;
+                        height: 30px;
+                        width: 80px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 3px 5px;
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                        p {
+                            font-size: 15px;
+                            margin-left: 5px;
+                        }
+                    }
+                    .javaScript, .typeScript {
+                        width: 120px;
+                    }
+                    .node, .mysql, .github {
+                        width: 100px;
+                    }
+                }
+            }
+            
+        }
+        .descForm {
+            border: 3px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            overflow-y: scroll;
+            height: 250px;
+            margin-top: 10px;
+            white-space:pre-line;
+            p {
+                
+            }
+        }
+    }
+    
+    ::-webkit-scrollbar {
+        display: block;
+        background-color: rgba(232,213,196,0.4);
+        width:10px;
+        height: 10px;
+        padding-right: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        height: 30px;
+        background-color: black;
+      }
+}

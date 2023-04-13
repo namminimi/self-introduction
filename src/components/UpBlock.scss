@@ -1,0 +1,57 @@
+.upBlock {
+    width: 100%;
+    max-width: 900px;
+    margin: 0px 15px;
+    
+    h2 {
+        font-size: 30px;
+        margin: 10px;
+        .biIdCard{
+            vertical-align: middle;
+        }
+    }
+    .information{
+            display: flex;
+            justify-content: flex-start;
+            border: 3px solid #ccc;
+            padding: 30px 30px 30px 20px;
+            width:100%;
+            border-radius: 10px;
+            align-items: center;
+            background-color: rgba(0,0,0,0.1);
+            .myPicture {
+                width: 30%;
+                img{
+                    width: 180px;
+                    height: 250px;
+                    border: 1px solid #333;
+                }  
+            }
+            .bor {
+                border-left: 1px solid #ccc;
+                height: 250px;
+                width: 8%;
+            }
+            .inforTable{
+                width: 60%;
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 220px;
+                    list-style: none;
+                    h3 {
+                        font-size: 22px;
+                        margin: 0px 0px 5px;
+                    }
+                    p {
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin: 0px 0px 5px;
+                    }
+                }
+                .blog {
+                    width: 300px; 
+                }
+            }
+        }
+}

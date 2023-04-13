@@ -1,0 +1,112 @@
+@keyframes loading {
+    0% {
+        transform: translateX(0);
+    }
+    50%,
+    100% {
+        transform: translateX(500px);
+    }
+}
+@keyframes loading2 {
+    0% {
+        transform: translateX(0);
+    }
+    50%,
+    100% {
+        transform: translateX(150px);
+    }
+}
+
+.skeleton-projectListBox {
+    margin-bottom: 50px;
+    h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .skeleton-projectList {
+        border: 3px solid rgba(232,213,196,0.4);
+        border-radius: 15px;
+        background-color: #7C96AB;
+        height: 350px;
+        padding: 20px;
+        color:  black;
+        overflow-y: scroll;
+        .skeleton-pLi{
+            padding: 10px 30px;
+            border: 2px solid #ccc;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &:hover {
+                border-color: black
+            }
+            h3::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 580px;
+                height: 180px;
+                background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2);
+                animation: loading 3s infinite linear;
+            }
+            h3{
+                width: 500px;
+                height: 30px;
+                background: #f2f2f2;
+                position: relative;
+                overflow:hidden;
+                border-radius: 10px;
+            }
+            .line {
+                width:880px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ccc;
+                margin-bottom: 10px;
+            }
+            .skeleton-language {
+                display: flex;
+                flex-wrap: wrap;
+                li::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 80px;
+                    background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2);
+                    animation: loading2 3s infinite linear;
+                }
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 3px 5px;
+                    width: 100px;
+                    height: 30px;
+                    margin-bottom: 15px;
+                    background: #f2f2f2;
+                    position: relative;
+                    overflow:hidden;
+                    border-radius: 10px;
+                }
+            }
+        }
+        
+    }
+    ::-webkit-scrollbar {
+        display: block;
+        background-color: rgba(232,213,196,0.4);
+        width:10px;
+        height: 10px;
+        padding-right: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        height: 30px;
+        background-color: #ccc;
+      }
+}

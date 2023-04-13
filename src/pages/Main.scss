@@ -1,0 +1,21 @@
+.wrap{
+    height: 100vh;
+    overflow-y: auto;
+    #main {
+        background-image: url("http://localhost:3000/images/body_bg.png");
+        display: flex;
+        padding-left: 15px;
+        z-index: 2;
+        #content {
+            width: 50%;
+            height: 100vh;
+            padding-top: 20px;
+            margin-right: 12px;
+        }
+    }
+}
+
+
+
+
+
