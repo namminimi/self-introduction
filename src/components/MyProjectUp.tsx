@@ -21,7 +21,7 @@ const MyProjectUp = ({data, setNo, setMainImg}:MyProjectUpData) => {
                     <h2>Project-List(Solo)</h2>
                     <ul className='projectList'>
                         {data.map((solo, index) => <li key={solo.p_no} className='pLi' onClick={() =>onOpenDisplay(solo.p_no, solo.p_img1, solo.p_vide1)}>
-                            <h3>{data[index].p_title.replace(/\<br>/g, '\n')}<span>인원: {solo.p_person.split(",").length}명 / {solo.p_person}</span></h3>
+                            <h3>{data[index].p_title.replace(/\<br>/g, '\n')}{window.innerWidth <= 762 ? <br/> : null}<span>인원: {solo.p_person.split(",").length}명 / {solo.p_person}</span></h3>
                             <ul className='language'>
                                 {solo.p_language.indexOf("Html") !== -1 ? 
                                 <li>

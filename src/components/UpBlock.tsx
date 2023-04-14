@@ -28,7 +28,7 @@ const UpBlock = () => {
                         <h3>E-mail:</h3>
                         <p>uou413@naver.com</p>
                     </li>
-                    <li>
+                    <li className='github'>
                         <h3>GitHub:</h3>
                         <p>https://github.com/namminimi</p>
                     </li>

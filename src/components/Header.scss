@@ -11,3 +11,25 @@ header {
         height: 450px;
     }
 }
+
+@media screen and (max-width: 762px) {
+    header {
+        padding: 400px 0px 0px 100px;
+        h2{
+            font-size: 70px;
+            width: 600px;
+            height: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        padding: 500px 0px 0px 15px;
+        h2{
+            font-size: 45px;
+            width: 380px;
+            height: 250px;
+        }
+    }
+}

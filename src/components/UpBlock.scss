@@ -55,3 +55,109 @@
             }
         }
 }
+
+@media screen and (max-width: 762px) {
+    .upBlock {
+        max-width: 705px;
+        h2 {
+            font-size: 30px;
+            margin: 5px;
+            .biIdCard{
+                vertical-align: middle;
+            }
+        }
+        .information{
+            display: flex;
+            justify-content: space-between;
+            border: 3px solid #ccc;
+            padding: 30px 30px 30px 50px;
+            width: 100%;
+            border-radius: 10px;
+            align-items: center;
+            background-color: rgba(0,0,0,0.1);
+            .myPicture {
+                width: 35%;
+                img{
+                    width: 150px;
+                    height: 200px;
+                    border: 1px solid #333;
+                }  
+            }
+            .bor {
+                border-left: 1px solid #ccc;
+                height: 200px;
+                width: 10%;
+            }
+            .inforTable{
+                width: 60%;
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 150px;
+                    list-style: none;
+                    h3 {
+                        font-size: 18px;
+                        margin: 0px 0px 5px;
+                    }
+                    p {
+                        font-size: 15px;
+                        font-weight: 600;
+                        margin: 0px 0px 5px;
+                    }
+                }
+                .blog {
+                    width: 300px; 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .upBlock {
+        max-width: 345px;
+        h2 {
+            font-size: 25px;
+        }
+        .information{
+            flex-direction: column;
+            padding: 10px 10px 10px 10px;
+            .myPicture {
+                img{
+                    width: 100px;
+                    height: 130px;
+                }  
+            }
+            .bor {
+                border-left: 0px;
+                border-bottom: 1px solid #ccc;
+                width: 280px;
+                height: 0px;
+                margin: 10px 0px;
+            }
+            .inforTable{
+                width: 100%;
+                justify-content: center;
+                li {
+                    width: 120px;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    h3 {
+                        font-size: 16px;
+                        margin: 0px 0px 5px;
+                    }
+                    p {
+                        font-weight: 600;
+                        margin: 0px 0px 5px;
+                    }
+                }
+                .github{
+                    width: 260px; 
+                }
+                .blog {
+                    width: 260px; 
+                }
+            }
+        }
+    }
+}

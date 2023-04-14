@@ -23,7 +23,6 @@
       margin-bottom: 15px;  
     }
     .detailWrap{
-        
         border-radius: 5px;
         padding: 15px;
         .detailForm{
@@ -153,4 +152,201 @@
         height: 30px;
         background-color: black;
       }
+}
+
+@media screen and (max-width: 762px) {
+    .selectProject {
+        width: 700px;
+        overflow-y: scroll;
+        .grClose {
+            left: 92%;
+            font-size: 35px;
+        }
+        .mainText{
+          font-size: 35px;
+          margin-bottom: 0px;  
+        }
+        .detailWrap{
+            
+            .detailForm{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .imgList{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    .bigImg {
+                        img{
+                            width: 570px;
+                            height: 300px;
+                        }
+                        iframe {
+                            width: 570px;
+                            height: 300px;
+                        }
+                    }
+                    .smallImg {
+                        display: flex;
+                        padding: 10px 0px;
+                        li{
+                            margin-left: 10px;
+                            img {
+                                width: 135px;
+                                height: 80px; 
+                            }
+                            &:first-child{
+                                margin-left: 0px
+                            }
+                        }
+                    }
+                }
+                .descList {
+                    width: 100%;
+                    padding-left: 0px;
+                    h2 {
+                        font-size: 23px;
+                        margin-bottom: 10px;
+                    }
+                    .textB {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                        span {
+                            margin-left: 10px;
+                            font-weight: 600;
+                            font-size: 20px;
+                        }
+                        a {
+                            margin-left: 10px;
+                            font-weight: 400;
+                            font-size: 20px;
+                            text-decoration: underline;
+                            &:hover {
+                                color: blueviolet;
+                                text-decoration: underline;
+                            }
+                        }
+                        
+                    }
+                    .textS {
+                        margin-bottom: 5px;
+                    }
+                    
+                    .useLanguage {
+                        display: flex;
+                        flex-wrap: wrap;
+                        li {
+                            border: 1px solid #ccc;
+                            background-color: #fff;
+                            border-radius: 20px;
+                            height: 30px;
+                            width: 80px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 3px 5px;
+                            img {
+                                width: 20px;
+                                height: 20px;
+                            }
+                            p {
+                                font-size: 15px;
+                                margin-left: 5px;
+                            }
+                        }
+                        .javaScript, .typeScript {
+                            width: 120px;
+                        }
+                        .node, .mysql, .github {
+                            width: 100px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 400px) {
+    .selectProject {
+        width: 380px;
+        padding: 20px 10px 0px;
+        .grClose {
+            left: 87%;
+            font-size: 35px;
+        }
+        .mainText{
+          font-size: 25px;
+        }
+        .detailWrap{
+            padding: 25px 0px;
+            .detailForm{
+                .imgList{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    .bigImg {
+                        img{
+                            width: 360px;
+                            height: 300px;
+                        }
+                        iframe {
+                            width: 360px;
+                            height: 300px;
+                        }
+                    }
+                    .smallImg {
+                        display: flex;
+                        padding: 10px 0px;
+                        li{
+                            margin-left: 5px;
+                            img {
+                                width: 87px;
+                            }
+                            &:first-child{
+                                margin-left: 0px
+                            }
+                        }
+                    }
+                }
+                .descList {   
+                    .textB {
+                        font-size: 20px;
+                        span {
+                            font-size: 18px;
+                        }
+                        a {
+                            font-weight: 400;
+                            font-size: 15px;
+                        }
+                    }  
+                    .useLanguage {
+                        li {
+                            height: 25px;
+                            width: 70px;
+                            img {
+                                width: 18px;
+                                height: 18px;
+                            }
+                            p {
+                                font-size: 13px;
+                                margin-left: 3px;
+                            }
+                        }
+                        .javaScript, .typeScript {
+                            width: 100px;
+                        }
+                        .node, .mysql, .github {
+                            width: 80px;
+                        }
+                    }
+                }
+                
+            }
+            .descForm {
+                height: 180px;
+            }
+        }
+    }  
 }

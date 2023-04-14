@@ -108,3 +108,100 @@
         
     }
 }
+
+@media screen and (max-width: 762px) {
+    .myProject {
+        .goback{
+            margin-bottom: 20px;
+            a {
+                .faArrowLeft {
+                    font-size: 25px;
+                }
+                span {
+                    font-size: 25px;
+                }
+            }  
+        }
+        .projectListBoxs {
+            .projectListBox {
+                .projectList {
+                    .pLi{
+                        h3{
+                            font-size: 20px;
+                            span {
+                                margin-left: 0px;
+                            }
+                        }
+                        .language {
+                            li {
+                                height: 25px;
+                                width: 70px;
+                                img {
+                                    width: 18px;
+                                    height: 18px;
+                                }
+                                p {
+                                    font-size: 13px;
+                                }
+                            }
+                            .javaScript, .typeScript {
+                                width: 100px;
+                            }
+                            .node, .mysql, .github {
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .myProject {
+        .projectListBoxs {
+            .projectListBox {
+                margin-bottom: 30px;
+                h2{
+                    font-size: 25px;
+                }
+                .projectList {
+                    height: 375px;
+                    .pLi{
+                        padding: 10px 10px;
+                        border-radius: 10px;
+                        h3{
+                            font-size: 18px;
+                            span {
+                                margin-left: 0px;
+                            }
+                        }
+                        .language {
+                            li {
+                                height: 25px;
+                                width: 70px;
+                                margin: 3px 3px;
+                                img {
+                                    width: 18px;
+                                    height: 18px;
+                                }
+                                p {
+                                    font-size: 13px;
+                                }
+                            }
+                            .javaScript, .typeScript {
+                                width: 100px;
+                            }
+                            .node, .mysql, .github {
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

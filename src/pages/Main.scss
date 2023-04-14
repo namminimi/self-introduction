@@ -15,7 +15,27 @@
     }
 }
 
+@media screen and (max-width: 762px) {
+    .wrap{
+        #main {
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+            z-index: 2;
+            #content {
+                width: 100%;
+                height: 100vh;
+                padding-top: 20px;
+                margin-right: 12px;
+            }
+        }
+    }
 
+}
+
+@media screen and (max-width: 476px) {
+
+}
 
 
 

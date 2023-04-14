@@ -110,3 +110,55 @@
         background-color: #ccc;
       }
 }
+
+@media screen and (max-width: 762px) {
+    .skeleton-projectListBox {
+        .skeleton-projectList {
+            .skeleton-pLi{
+                .line {
+                    width:580px;
+                }
+                .skeleton-language {
+                    li {
+                        width: 70px;
+                        height: 25px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .skeleton-projectListBox {
+            margin-bottom: 30px;
+            h2{
+                font-size: 25px;
+            }
+        .skeleton-projectList {
+            height: 375px;
+            .skeleton-pLi{
+                padding: 10px 10px;
+                border-radius: 10px;
+                h3::before{
+                    width: 150px;
+                }
+                h3{
+                    width: 200px;
+                    height: 30px;
+                }
+                .line {
+                    width:260px;
+                }
+                .skeleton-language {
+                    li {
+                        width: 40px;
+                        height: 20px;
+                    }
+                }
+            }
+            
+        }
+    }
+}

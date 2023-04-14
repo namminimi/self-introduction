@@ -83,7 +83,7 @@ const MiddleBlock = () => {
                             </div>
                             <div className='gitIcon icons'>
                                 <BsGit/>
-                                <h4>git</h4>
+                                <h4>Git</h4>
                             </div>
                         </div>
                     </div>{/* 버젼관리 */}
@@ -97,7 +97,7 @@ const MiddleBlock = () => {
                             </div>
                             <div className='vercelIcon icons'>
                                 <img src="images/vercel.png" alt="" />
-                                <h4>vercel</h4>
+                                <h4>Vercel</h4>
                             </div>
                             <div className='herokuIcon icons'>
                                 <img src="images/heroku_logo.png" alt="" />
