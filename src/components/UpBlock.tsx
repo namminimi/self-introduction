@@ -30,11 +30,11 @@ const UpBlock = () => {
                     </li>
                     <li className='github'>
                         <h3>GitHub:</h3>
-                        <p><a href="https://github.com/namminimi">https://github.com/namminimi</a></p>
+                        <p><a href="https://github.com/namminimi" target="blank">https://github.com/namminimi</a></p>
                     </li>
                     <li className='blog'>
                         <h3>Blog:</h3>
-                        <p><a href="https://uou413.tistory.com/">https://uou413.tistory.com/</a></p>
+                        <p><a href="https://uou413.tistory.com/" target="blank">https://uou413.tistory.com/</a></p>
                     </li>
                 </ul>
             </div>
