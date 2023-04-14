@@ -49,11 +49,12 @@
                         margin: 0px 0px 5px;
                         a{
                             text-decoration: underline;
+                            &:hover {
+                                color: blueviolet;
+                                text-decoration: underline;
+                            }
                         }
-                        &:hover {
-                            color: blueviolet;
-                            text-decoration: underline;
-                        }
+                        
                     }
                 }
                 .blog {
