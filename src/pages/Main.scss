@@ -1,11 +1,13 @@
+
 .wrap{
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
     #main {
         background-image: url("http://localhost:3000/images/body_bg.png");
         display: flex;
         padding-left: 15px;
         z-index: 2;
+        width: 100%;
         #content {
             width: 50%;
             height: 100vh;

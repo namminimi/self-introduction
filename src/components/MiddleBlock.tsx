@@ -107,11 +107,6 @@ const MiddleBlock = () => {
                     </div>
                 </div>
             </div>
-            <div className='moveList'>
-                <Link to="/projects">
-                    <h3><span>Project List</span><FaArrowRight className='faArrowRight'/></h3>
-                </Link>
-            </div>
         </div>
     );
 };

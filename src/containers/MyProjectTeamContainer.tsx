@@ -21,6 +21,8 @@ const MyProjectTeamContainer = ({setNo, setMainImg}:MyProjectTeamContainerType) 
         const data = await axios.get(`${API_URL}/projectTeam`)
         return data
     }
+
+    
     useEffect(()=>{
        dispatch(getDataTeamF(projectSoleDatas))
     },[dispatch])

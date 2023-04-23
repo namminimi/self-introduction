@@ -1,52 +1,72 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import { GrClose } from "react-icons/gr";
 import "./SelectProject.scss"
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { rootState } from '../modules';
-import { onClose } from '../modules/display';
-import axios from 'axios';
 import { API_URL } from '../config/apiurl';
-import { getDataF } from '../modules/project';
+import { ProjectType } from '../apis/dataType';
+import { rootState } from '../modules';
+import { useSelector } from 'react-redux';
 
 type SelectProjectType = {
-    isNo: number
-    setNo: React.Dispatch<React.SetStateAction<number>>
     setMainImg: React.Dispatch<React.SetStateAction<string | null | undefined>>
     isMainImg: string | null | undefined
+    data: ProjectType
+    onCloseDisplay: () => void
+    isOpen: boolean
 }
 
-const SelectProject = ({isNo, setNo, isMainImg, setMainImg}:SelectProjectType) => {
-    const isOpen = useSelector((state:rootState) => state.displayOnOff.stateType)
-    const {loading, data, error} = useSelector((state: rootState) => state.project.project)
-    
-    console.log(isMainImg)
-
-    const dispatch = useDispatch<any>();
+const SelectProject = ({isMainImg, setMainImg, data, onCloseDisplay, isOpen}:SelectProjectType) => {
+    const onDisplay = useSelector((state:rootState)=> state.displayOnOff.stateType)
+    const outerDivRef = useRef<any>();
+    console.log(outerDivRef)
+    console.log(onDisplay)
+    const dispatch = useDispatch<any>(); 
     
     const onImg = (img:string) => {
         setMainImg(img)
     }
-    const onCloseDisplay = () => {
-        dispatch(onClose())
-        setNo(0)
-        setMainImg(data?.p_vide1 !== null ? `${data?.p_vide1}`: `${data.p_img1}`)
-    }
-
-    const selectProject = async () => {
-        const data = await axios.get(`${API_URL}/selectProject/${isNo}`)
-        return data
-    }
-    
-    console.log(isMainImg!.indexOf("mp4"))
-    useEffect(()=>{
-        dispatch(getDataF(selectProject))
-    },[dispatch, isNo])
-    if(loading) return <div>로딩중.....</div>
-    if(error) return <div>에러발생</div>
-    if(!data) return <div>데이터가 없습니다</div>
     let tap = data.p_desc.replace(/\<br>/g, '\n')
     let title = data.p_title.replace(/\<br>/g, '\n')
+    document.addEventListener("scroll", function(){
+        let sct = document.documentElement.scrollTop;
+        console.log(sct)
+    })
+    useEffect(()=>{
+        const wheelHandler = (e:React.WheelEvent<HTMLDivElement>)=>{
+        e.preventDefault();
+        const {deltaY} = e
+        const {scrollTop} = outerDivRef.current; //스크롤 위쪽 끝부분 위치
+        const pageHeight = window.innerHeight; // 화면 세로길이
+    
+        if(deltaY > 0) {
+            //스크롤 내릴때
+            if(scrollTop >= 0 && scrollTop < pageHeight) {
+              //현재 1페이지
+              outerDivRef.current.scrollTo({
+                top: scrollTop + 150,
+                left: 0,
+                behavior: "smooth",
+              });
+            }
+        } else {
+            //스크롤 올릴 때
+            if (scrollTop >= 0 && scrollTop < pageHeight + 300) {
+              //현재 1페이지
+              outerDivRef.current.scrollTo({
+                top: scrollTop - 150,
+                left: 0,
+                behavior: "smooth",
+              });
+            }
+          }
+        }
+    
+        const outerDiveRefCurrent = outerDivRef.current;
+        outerDiveRefCurrent.addEventListener("wheel", wheelHandler);
+        return () => {
+          outerDiveRefCurrent.removeEventListener("wheel", wheelHandler)
+        }
+      }, [onDisplay])
     return (
         <div className='selectProject' style={{display: isOpen ? "block" : "none"}}>
             <p></p>
@@ -151,8 +171,8 @@ const SelectProject = ({isNo, setNo, isMainImg, setMainImg}:SelectProjectType) =
                         </ul>
                     </div>
                 </div>
-                <div className='descForm'>
-                    <p>{tap}</p>
+                <div className='descForm' ref={outerDivRef}>
+                    <p >{tap}</p>
                 </div>
             </div>
         </div>
