@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# 🖥️ 프로젝트(개인) 소개
+내 소개 포트폴리오
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🕰️ 개발 기간
+* 23.04.10 - 23.04.16
 
-## Available Scripts
+## ⚙️ 사용한 스킬
+Html, Css, JavaScript, Scss, React, Redux, TypeScript, MySQL, Git, GitHub 
 
-In the project directory, you can run:
+## 📌 프로젝트 목록
 
-### `npm start`
+#### JavaScript를 활용한 게임만들기(야구게임) - 팀프로젝트(김동현, 남민섭) 개발기간: 22.11.18 - 22.11.25
+<a href="https://github.com/namminimi/baseball-project1" >GitHub 이동</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Canvas를 활용한 게임만들기(무단횡단하기 게임) - 개인 프로젝트(남민섭) 개발기간: 22.12.05 - 22.12.14
+<a href="https://github.com/namminimi/crazyGame-project2" >GitHub 이동</a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### PHP를 활용한 웹사이트 만들기(의류쇼핑몰) - 팀 프로젝트(김재원, 남민섭, 전진솔) 개발기간: 22.12.20 - 23.01.03
+<a href="https://github.com/namminimi/shopping" >GitHub 이동</a>
+</div>
+<a href="http://uou413.dothome.co.kr/shopping/index.php" >웹사이트 이동</a>
 
-### `npm test`
+#### React를 활용한 웹사이트 만들기(영화 커뮤니티) - 팀 프로젝트(권세영, 김주원, 남민섭, 이창민) 개발기간: 23.02.01 - 23.02.14
+<a href="https://github.com/namminimi/movie-react" >GitHub 클라이언트 이동</a>
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a href="https://github.com/namminimi/movie-server2" >GitHub 서버 이동</a>
+</div>
 
-### `npm run build`
+<a href="https://movie-react-khaki.vercel.app/" >웹사이트 이동</a>
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### React를 활용한 웹사이트 만들기(영화 커뮤니티) - 개별 프로젝트(남민섭) 개발기간: 23.03.09 - 23.04.07
+<a href="https://github.com/namminimi/ice-cream" >GitHub 클라이언트 이동</a>
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<a href="https://github.com/namminimi/ice-cream-server" >GitHub 서버 이동</a>
+</div>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<a href="https://ice-cream-iota.vercel.app/" >웹사이트 이동</a>
+</div>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
