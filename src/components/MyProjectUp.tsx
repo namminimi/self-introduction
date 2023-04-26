@@ -1,7 +1,8 @@
-import React,{useState} from 'react';
+import React,{useState, useRef, useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import { onOpen } from '../modules/display';
 import { ProjectType } from '../apis/dataType';
+import { onDown, onNumber, onUp } from '../modules/scroll';
 
 type MyProjectUpData = {
     data: ProjectType []
@@ -16,10 +17,53 @@ const MyProjectUp = ({data, setNo, setMainImg}:MyProjectUpData) => {
         setNo(id)
         setMainImg(vide === null ? img : vide)
     }
+    const outerDivRef = useRef<any>();
+  useEffect(()=>{
+    const wheelHandler = (e:React.WheelEvent<HTMLDivElement>)=>{
+    e.preventDefault();
+    const {deltaY} = e
+    const {scrollTop} = outerDivRef.current; //스크롤 위쪽 끝부분 위치
+    const pageHeight = window.innerHeight; // 화면 세로길이
+
+    if(deltaY > 0) {
+        //스크롤 내릴때
+        if(scrollTop >= 0 && scrollTop < pageHeight) {
+          //현재 1페이지
+          outerDivRef.current.scrollTo({
+            top: pageHeight ,
+            left: 0,
+            behavior: "smooth",
+          });
+          dispatch(onUp())
+          dispatch(onNumber(scrollTop))
+        }
+    } else {
+        //스크롤 올릴 때
+        if (scrollTop >= 0 && scrollTop < pageHeight) {
+          //현재 1페이지
+          outerDivRef.current.scrollTo({
+            top:0,
+            left: 0,
+            behavior: "smooth",
+          });
+          
+          if(scrollTop === 0) {
+            dispatch(onDown())
+          }
+        }
+      }
+    }
+
+    const outerDiveRefCurrent = outerDivRef.current;
+    outerDiveRefCurrent.addEventListener("wheel", wheelHandler);
+    return () => {
+      outerDiveRefCurrent.removeEventListener("wheel", wheelHandler)
+    }
+  }, [])
     return (
         <div className='projectListBox'>
             <h2>Project-List(Solo)</h2>
-                    <ul className='projectList proSolo'>
+                    <ul className='projectList proSolo' ref={outerDivRef}>
                         {data.map((solo, index) => <li key={solo.p_no} className='pLi' onClick={() =>onOpenDisplay(solo.p_no, solo.p_img1, solo.p_vide1)}>
                             <h3>{data[index].p_title.replace(/\<br>/g, '\n')}{window.innerWidth <= 762 ? <br/> : null}<span>인원: {solo.p_person.split(",").length}명 / {solo.p_person}</span></h3>
                             <ul className='language'>

@@ -7,6 +7,7 @@ import { FaReact, FaGithub, FaPython, FaAws, FaSass, FaArrowRight} from "react-i
 import { BsGit } from "react-icons/bs";
 import { MdOutlineComputer } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import License from './License';
 
 const MiddleBlock = () => {
     return (
@@ -107,6 +108,7 @@ const MiddleBlock = () => {
                     </div>
                 </div>
             </div>
+            <License/>
         </div>
     );
 };
